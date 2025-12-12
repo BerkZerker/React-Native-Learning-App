@@ -1,6 +1,7 @@
 import * as ImagePicker from "expo-image-picker";
-import { useState } from "react";
 import { StyleSheet, View } from "react-native";
+
+import { useState } from "react";
 
 import Button from "@/components/Button";
 import ImageViewer from "@/components/ImageViewer";
@@ -11,6 +12,7 @@ export default function Index() {
   const [selectedImage, setSelectedImage] = useState<string | undefined>(
     undefined
   );
+
   const pickImageAsync = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ["images"],
@@ -53,7 +55,6 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 1,
-    paddingTop: 28,
   },
   footerContainer: {
     flex: 1 / 3,
